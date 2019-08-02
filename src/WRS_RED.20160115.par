@@ -1,0 +1,59 @@
+
+;=================================================================================================
+;WRS RED CHANNEL PARAMETERS
+;The following parameters let the user set up WRS, the wavefront reconstruction code for LBC.
+
+;For information or to report bugs please contact marco.stangalini@inaf.it
+
+;WRS PAR
+;first version: Apr 2014.
+;May 2014 Zernike scale factors added. (MS)
+;20140615 flipped Z7 (JMH)
+;20140620 flipped Z5 and Z11 checked (MS)
+;20140901 added first_order_adj mode (MS)
+;20150326 COMA_morph COMA_INIT_morph KEYWORDS ADDED BY MS FOR BLUE CHANNEL
+;20150326 SPH_CHECK added (MS)
+;=================================================================================================
+
+
+{wrs, 
+D:         8.40000,	;Telescope diameter in [m]
+EPS:       0.16,	;Telescope obscuration [%]
+LAMBDA:    0.55,	;working wavelength
+PIXEL:     0.223,	;pixel scale [arcsec]
+NGRID:      1024,	;Padding do not change unless you know what you are doing
+THRESH:     0.4,	;Numerical threshold used in the WRS code. Do not change unless you know what you are doing
+NZER:        11,	;Maximum number of Zernike terms to be estimated. Used only in WRS slow mode. Larger than 12 may cause instabilities.
+SMOOTHING: 3,		;Smoothing window to reduce noise. 3 is a good option. Do not change unless you know exactly what you are doing. Use with care. 
+DEFAULT_SIGMA: 3, 	;Starting sigma noise threshold. If there is no pupil above this value, WRS will try to automatically adjust the threshold before giving up.
+FAST_MODE: 0,		;FAST_MODE=1,0 --> YES, NO. In the fast mode only Zernike up to #6 are estimated. This is very fast (less than 1 s) 
+DISP: 1,		;DISP=1,0 --> Enabled, Disabled. It enables the display of the information about the pupil selected and its relative model
+EFOC: -1,		;Extra- or intrafocal mode (do not change)
+THRESHOLD_ADJ: 0.9,	;If there is no pupil detected the detection threshold is iteratively lowered. Example: sigma=sigma*threshold_adj
+SAVE_DIR: './save/',	;Saving dir used to save plots and images. Used only if SAVE_WRS is on. The directory chosen must be created before running WRS.
+SAVE_WRS: 1,		;If eq 1 WRS saves the image and the model of the selected pupil in a sav file. The filename will contain the timestamp as in the log file.
+NCYCLES: 8, 		;Maximum number of WRS iterations
+THRESHSVD: 6, 		;Initial SVD threshold in slow mode
+INTERACTIVE: 1,		;If eq 1 then interactive coma adjustment is performed at the first iteration. If 0 is switched off. IN SLOW MODE it works only with first_order_adj enabled
+FIRST_ORDER_ADJ: 1,	;First order coma estimation 
+COMA_THRESHOLD: 1.1,	;if coma gt coma threshold then only coma will be adjusted at first iter
+COMA_INIT_MORPH: 0,	;if eq 1 initializes coma with morphoogy analysis in slow mode
+COMA_MORPH: 0,		;if eq 1 forces coma to be estimated with a morphology analysis instead of moments of intensity distr. Useful in LBC-BLUE
+SPHCHECK:1,		;Sph Z11 check
+SPHTHR: 6,		;threshold in pix within which the maximum of the intensity, if found, enables the sph initialization
+SPHTHR2: 18,		;lower radius of the max intensity enabling Sph toward the edge of the pupil
+DEBUG: 1,		;ENABLES DEBUGGING MODE WITH VISUALIZATION OF MODEL CONVERGENCE during SLOW MODE
+AUTOREVERSE: 0,		;Autoreverse mode. Tries to automatically switch EFOC if at the second step pupil is not improving. Useful for BLUE channel.
+a1:1,			;Zernike scale factors. a1, a2, and a3 are not used and are respectively: seeing, tip and tilt
+a2:0,			
+a3:0,
+a4:1.0,			;Defocus (must be 1.0 before the offset is subtracted)
+a5:0.8, 		;AstX 
+a6:-.8,			;AstY
+a7:-0.5,		;ComaX
+a8:0.5,			;ComaY
+a9:0.1,			;Trefoil
+a10:0.1,                ;Trefoil
+a11:0.5,
+soft_ver: '0.9.8'	;WRS software version
+}

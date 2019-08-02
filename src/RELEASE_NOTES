@@ -1,0 +1,108 @@
+WRS VERSION TRACKING
+
+
+last version 	0.9.12
+
+
+============================================================================================================================================
+
+WRS ver 0.9.12 (20160220)
+
+improvements to Z11 initial check
+
+
+
+============================================================================================================================================
+
+WRS ver 0.9.11 (20160120)
+
+Sph Bug fixes
+Optimized procedure for Blue channel SpH first order estimate
+
+
+=============================================================================================================================================
+WRS ver 0.9.10 (20151221)
+
+Bug fix: a small bug preventing IDL to read inputs from standard remote terminal fixed
+Minor bug affecting the final displayed models fixed
+Bug preventing the compilation of the correct WRS_LIB.findze fixed. This bug was preventing the use of keywords in findze routine
+
+
+
+=============================================================================================================================================
+WRS ver 0.9.9 (20150703)
+
+The function compile_file used to compile the needed library without make_Wrs is only available with IDL 8.
+To solve this problem the shell script wrs.sh is created. This way WRS can be launched from the shell without opening IDL.
+
+
+
+=============================================================================================================================================
+WRS ver 0.9.8 (20150703)
+
+1 make_wrs2 call added to CALL_WRS. This compiles the WRS routines on the fly. No @make_wrs needed anymore.
+2 Separated output dysplays for RED and BLUE channel
+3 Issue with unit 33 open when Ctrl+c fixed
+
+
+=============================================================================================================================================
+WRS ver 0.9.7 (20150326)
+
+1 Blue and red param files separated
+2 Added sph_chek.pro Spherical aberration check before coma first order estimate. This is introduced for the evaluation of the Sph which often affects LBC-B
+3 CALL_WRS now reads blue and red param files depending on the keyword set
+
+
+=============================================================================================================================================
+WRS ver 0.9.6 (20140901)
+
+1 Bug fixed on the number of Zernike used and their mapping in LBC_WRS.pro
+2 Interactive mode enabled only if first_order_adj keyword is set
+2 FIRST_ORDER_KEYWORD_ADJ added to allow the operator to choose the rough estimation of come
+
+
+=============================================================================================================================================
+WRS ver 0.9.5 (20140620)
+
+1 Bug fix. The coma in the slow mode had a wrog scaling factor applied
+2 Zernike rotation thank to John Hill
+3 Bug fix. The defocus was lower than estimated in the display
+4 IDL Paths changed in order to be compliant with the DOFPIA (thank to Kellee)
+5 Z5 Z6 Z7 Z8 Z11 CHECKED
+
+
+=============================================================================================================================================
+WRS ver 0.9.4 (12/06/2014)
+
+1. Bug preventing the correct estimate of the position of the obscuration in coma.pro fixed (this bug was introduced in ver 0.9.3)
+2. Defocus offset removed in LBC_WRS.pro in the presence of large coma. 
+3. Gain adjustment in coma.pro
+4. Interactive coma adjustment introduced 
+
+
+=============================================================================================================================================
+WRS ver 0.9.3 (09/06/2014)
+1. NaN bug fixed in coma.pro
+2. display refinement in LBC_WRS
+3. bug fixedin findpup.pro (pupils too close to borders where selected
+4. bug fixed in coma.pro that prevented the exact registration of the pupil
+
+
+=============================================================================================================================================
+WRS ver 0.9.2 (14/05/2014)
+1. Coma estimation added in the fast mode (coma.pro)
+2. Coma algorithm refinement using adaptive threshold selection. This makes possible to estimate coma even if pupils are not fully visible.
+3. in LBC_WRS.pro now there is a chack on the amount of coma. If it is too strong the algorithm will try to correct it before estimating and correcting the other aberrations.  
+4. Bug fixed. The pupil saturation check was not working.
+
+
+=============================================================================================================================================
+WRS ver 0.9.1 (7 May 2014)
+Bug fixed. 
+New Zernike-M1 mapping added in CALL_WRS.pro
+New section on Zernike scaling added to WRS par file
+LBC_WRS now checks for the IDL version in order to enable the /edge_mirror keyword in the smooth function for IDL ver higher or equal to 8.3
+
+
+=============================================================================================================================================
+WRS ver 0.9 first version (Apr 2014)

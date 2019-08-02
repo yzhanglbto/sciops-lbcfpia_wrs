@@ -1,0 +1,204 @@
+
+==========================================================================================================================
+WAVEFRONT RECONSTRUCTION Tue Sep  2 10:28:22 2014
+Parameters are read from /home/lbceng/WRS/src/WRS.par
+
+
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+                                    WRS wavefront reconstruction software ver. 0.9.6
+                                    Tue Sep  2 10:28:22 2014  WRS called
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+WRS INITIALIZATION...
+Rebinning factor:       32
+Grid pixel:    0.00696875 arcsec
+Grid size:       16.2793 m
+CCD pixel:       0.223000 arcsec
+FOV field:        14.2720 arcsec
+FOV pixels:       64
+
+WRS configuration summary: 
+{      8.40000     0.160000     0.550000     0.223000    1024     0.400000
+      12       3       3       0       1      -1     0.900000 ./save/       1
+      10     0.400000       0       0      1.10000       1       1       0
+       0      1.00000     0.800000     0.800000    -0.500000     0.500000
+     0.300000     0.300000     0.500000 0.9.6}
+
+WRS FAST MODE off -- Display mode on
+max number of Zernike to be estimated       12
+Searching for pupils...
+     192 CANDIDATES FOUND BELOW CCD SATURATION LEVEL
+CHECKING AND REMOVING OVERLAPPING PUPILS...
+           8 OVERLAPPING PUPILS FOUND
+ OVERLAPPING PUPILS REMOVED
+
+==========================================================================================================================
+WAVEFRONT RECONSTRUCTION Sat Feb 13 11:02:22 2016
+
+
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+                                    WRS wavefront reconstruction software ver. 0.9.8
+                                    Sat Feb 13 11:02:22 2016  WRS called
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+WRS INITIALIZATION...
+Rebinning factor:       32
+Grid pixel:    0.00696875 arcsec
+Grid size:       16.2793 m
+CCD pixel:       0.223000 arcsec
+FOV field:        14.2720 arcsec
+FOV pixels:       64
+
+LBC-RED configuration file read
+WRS configuration summary: 
+{      8.40000     0.160000     0.550000     0.223000    1024     0.400000
+      11       3       3       0       1      -1     0.900000 ./save/       1
+       8       6       1       1      1.10000       0       0       1       6
+      18       1       0       1       0       0      1.00000     0.800000
+    -0.800000    -0.500000     0.500000     0.100000     0.100000     0.500000
+0.9.8}
+
+WRS FAST MODE off -- Display mode on
+max number of Zernike to be estimated       11
+Searching for pupils...
+       2 CANDIDATES FOUND BELOW CCD SATURATION LEVEL
+CHECKING AND REMOVING OVERLAPPING PUPILS...
+           1 OVERLAPPING PUPILS FOUND
+ OVERLAPPING PUPILS REMOVED
+
+==========================================================================================================================
+WAVEFRONT RECONSTRUCTION Mon Sep  5 09:04:55 2016
+
+
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+                                    WRS wavefront reconstruction software ver. 0.9.8
+                                    Mon Sep  5 09:04:55 2016  WRS called
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+WRS INITIALIZATION...
+Rebinning factor:       32
+Grid pixel:    0.00696875 arcsec
+Grid size:       16.2793 m
+CCD pixel:       0.223000 arcsec
+FOV field:        14.2720 arcsec
+FOV pixels:       64
+
+LBC-RED configuration file read
+WRS configuration summary: 
+{      8.40000     0.160000     0.550000     0.223000    1024     0.400000
+      11       3       3       0       1      -1     0.900000 ./save/       0
+       8       6       0       1      1.10000       0       0       1       6
+      18       1       0       1       0       0      1.00000     0.800000
+    -0.800000    -0.500000     0.500000     0.100000     0.100000     0.500000
+0.9.8}
+
+WRS FAST MODE off -- Display mode on
+max number of Zernike to be estimated       11
+Searching for pupils...
+       3 CANDIDATES FOUND BELOW CCD SATURATION LEVEL
+CHECKING AND REMOVING OVERLAPPING PUPILS...
+BEST SUITED PUPIL @ X,Y       1449.40      437.230
+CROPPING IMAGE...
+Warning: central obscuration may be absent or not well definable...trying to go on anyway
+COMPUTING ZERNIKE TERMS... 
+
+ Z         1       2       3       4       5       6       7       8       9      10      11
+Cycle:        1  RMS=       82.2258 percent
+ um    0.500   2.307  18.818   9.532   0.930   3.604   0.000   0.000   0.000   0.000   0.000
+Computing the interaction matrix...
+Cycle:        2  RMS=       82.2258 percent
+ um    0.500   2.307  18.818   9.532   0.930   3.604   0.000   0.000   0.000   0.000   0.000
+Cycle:        3  RMS=       82.2258 percent
+ um    0.500   2.307  18.818   9.532   0.930   3.604   0.000   0.000   0.000   0.000   0.000
+Computing the interaction matrix...
+Cycle:        4  RMS=       67.0401 percent
+ um    0.521   2.307  18.815   9.562   0.932   3.600  -0.028  -0.013  -0.004   0.002   0.172
+Cycle:        5  RMS=       60.6227 percent
+ um    0.533   2.306  18.814   9.580   0.933   3.598  -0.044  -0.021  -0.007   0.004   0.272
+Computing the interaction matrix...
+Cycle:        6  RMS=       54.8339 percent
+ um    0.538   2.306  18.814   9.592   0.936   3.596  -0.101  -0.033  -0.005   0.009   0.410
+Cycle:        7  RMS=       53.0179 percent
+ um    0.540   2.306  18.814   9.599   0.937   3.595  -0.136  -0.041  -0.004   0.012   0.484
+Computing the interaction matrix...
+Cycle:        8  RMS=       33.4349 percent
+ um    0.791   2.309  18.800  10.390   0.908   3.424  -0.180  -0.046  -0.083   0.028   0.581
+Fitting done!
+Zernike coeffs. estimated [mu]: 
+Seeing [arcsec], tip, tilt, Defocus, 45 deg ast, 0 deg ast, Y coma, X coma, Y trefoil, X Trefoil, Sph,...
+     0.791030      2.30872      18.7999      10.3903    -0.907935     -3.42399
+    -0.179749   -0.0456744   -0.0825184    0.0276905     0.581358
+Applying Ze mapping ...
+Ze mapping succesfully applied
+M1 commands: 
+Seeing [arcsec], tip, tilt, Defocus, 45 deg ast, 0 deg ast, Y coma, X coma, Y trefoil, X Trefoil, Sph,...
+     0.791030      0.00000      0.00000      10.3903    -0.726348      2.73919
+    0.0898746   -0.0228372  -0.00825184   0.00276905     0.290679      0.00000
+WRS iteration completed on Mon Sep  5 09:06:58 2016
+==========================================================================================================================
+
+==========================================================================================================================
+WAVEFRONT RECONSTRUCTION Mon Sep  5 09:07:05 2016
+
+
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+                                    WRS wavefront reconstruction software ver. 0.9.8
+                                    Mon Sep  5 09:07:05 2016  WRS called
+            --------------------------------------------------------------------------------------------------
+            --------------------------------------------------------------------------------------------------
+WRS INITIALIZATION...
+Rebinning factor:       32
+Grid pixel:    0.00696875 arcsec
+Grid size:       16.2793 m
+CCD pixel:       0.223000 arcsec
+FOV field:        14.2720 arcsec
+FOV pixels:       64
+
+LBC-BLUE configuration file read
+WRS configuration summary: 
+{      8.40000     0.160000     0.550000     0.223000    1024     0.400000
+      11       3       3       0       1      -1     0.900000 ./save/       0
+       8       6       0       1      1.10000       0       0       1       6
+      18       1       0       1       0       0      1.00000     0.800000
+    -0.800000    -0.500000     0.500000     0.100000     0.100000     0.500000
+0.9.8}
+
+WRS FAST MODE off -- Display mode on
+max number of Zernike to be estimated       11
+Searching for pupils...
+       3 CANDIDATES FOUND BELOW CCD SATURATION LEVEL
+CHECKING AND REMOVING OVERLAPPING PUPILS...
+BEST SUITED PUPIL @ X,Y       1355.06      501.518
+CROPPING IMAGE...
+COMPUTING ZERNIKE TERMS... 
+
+ Z         1       2       3       4       5       6       7       8       9      10      11
+Cycle:        1  RMS=       22.1672 percent
+ um    0.500   0.155   3.858  14.097   0.508  -0.139   0.000   0.000   0.000   0.000   0.000
+Computing the interaction matrix...
+Cycle:        2  RMS=       22.1672 percent
+ um    0.500   0.155   3.858  14.097   0.508  -0.139   0.000   0.000   0.000   0.000   0.000
+Cycle:        3  RMS=       22.1672 percent
+ um    0.500   0.155   3.858  14.097   0.508  -0.139   0.000   0.000   0.000   0.000   0.000
+Computing the interaction matrix...
+Cycle:        4  RMS=       22.1415 percent
+ um    0.500   0.155   3.858  14.095   0.508  -0.139   0.001   0.000   0.000   0.000  -0.008
+Cycle:        5  RMS=       22.1318 percent
+ um    0.500   0.155   3.858  14.095   0.508  -0.139   0.002   0.000   0.000   0.000  -0.012
+Fitting done!
+Zernike coeffs. estimated [mu]: 
+Seeing [arcsec], tip, tilt, Defocus, 45 deg ast, 0 deg ast, Y coma, X coma, Y trefoil, X Trefoil, Sph,...
+     0.499620     0.155384      3.85767      14.0947    -0.508114     0.138905
+   0.00210428  0.000483218  8.28222e-06  0.000153459   -0.0116583
+Applying Ze mapping ...
+Ze mapping succesfully applied
+M1 commands: 
+Seeing [arcsec], tip, tilt, Defocus, 45 deg ast, 0 deg ast, Y coma, X coma, Y trefoil, X Trefoil, Sph,...
+     0.499620      0.00000      0.00000      14.0947    -0.406491    -0.111124
+  -0.00105214  0.000241609  8.28222e-07  1.53459e-05  -0.00582915      0.00000
+WRS iteration completed on Mon Sep  5 09:08:09 2016
+==========================================================================================================================

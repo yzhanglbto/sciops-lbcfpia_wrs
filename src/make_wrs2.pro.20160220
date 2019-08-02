@@ -1,0 +1,13 @@
+pro make_wrs2
+
+  close,33
+  file_compile, './readfits.pro'
+  file_compile, './ztools.pro'
+  file_compile, './lbcfpia_WRS.pro'
+  file_compile, ‘./cartop.pro’
+  COMMON param, WRS,ngrid,r,zgrid,pupil,Rpix,inside,asperpix,ccdpix,npixperpix,fovpix,sflag,sigpix,fl
+  common impix,immod,zres,z0,chis2,iter,xc,yc,efoc,ws0,ws1,img
+
+
+;return
+end

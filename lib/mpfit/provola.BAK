@@ -1,0 +1,15 @@
+Pro Provola, ima
+
+  Window,2
+
+  n = 120
+
+  sb = Sobel(ima)
+  edge = sb ge 2.1*mean(sb)
+
+  TvScl,congrid(ima,n,n)
+  TvScl,congrid(sb,n,n),n,0
+  TvScl,congrid(edge,n,n),2*n,0
+
+Return
+End

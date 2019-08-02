@@ -1,0 +1,24 @@
+                                                            K.Summers, Nov-2014
+
+As of Nov-2014, we're using the Ice interface to TCS for the TCSSendWavefront program.
+This is built from the lbccontrol/2.1 source area.
+
+                                                            K.Summers, April-2014
+                                                                      
+The TCSSendWavefront main program is used to read the output from DOFPIA from a 
+data file and call TCS IIF_SendWavefront to set the zernikes.
+
+The source is maintained in the LBC baseline because it is LBC-specific.  
+It is no longer (as of Summer-2014) maintained as part of the TCS build.
+
+Previous to April-2014, there was a link in this dir 
+(/home/lbcobs/LBCFPIA/lbcfpia/TCSSendWavefront) to the TCS version of this 
+executable:
+lrwxrwxrwx. 1 lbcobs   3000    41 Aug 29  2013 TCSSendWavefront -> /lbt/tcs/current/iif/bin/TCSSendWavefront
+
+The executable should be built on the CMU anytime the IIF interface changes 
+(which should be never).
+
+All of the old files have been moved to a new subdirectory called "old".  
+This includes the LBC source and libraries used to build the old, old way
+from LBC which included LBC libraries.  
